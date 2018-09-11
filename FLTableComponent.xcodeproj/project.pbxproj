@@ -10,6 +10,21 @@
 		EEC1EB302147CD4700FB77EC /* FLTableComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC1EB262147CD4700FB77EC /* FLTableComponent.framework */; };
 		EEC1EB352147CD4700FB77EC /* FLTableComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB342147CD4700FB77EC /* FLTableComponentTests.swift */; };
 		EEC1EB372147CD4700FB77EC /* FLTableComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC1EB292147CD4700FB77EC /* FLTableComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEC1EB892147D1B600FB77EC /* FLCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB7A2147D1B500FB77EC /* FLCollectionViewCell.swift */; };
+		EEC1EB8A2147D1B600FB77EC /* FLTableComponentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB7B2147D1B500FB77EC /* FLTableComponentController.swift */; };
+		EEC1EB8B2147D1B600FB77EC /* FLCollectionViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB7C2147D1B500FB77EC /* FLCollectionViewHandler.swift */; };
+		EEC1EB8C2147D1B600FB77EC /* FLTableComponentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB7D2147D1B500FB77EC /* FLTableComponentProtocol.swift */; };
+		EEC1EB8D2147D1B600FB77EC /* FLCollectionComponentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB7E2147D1B600FB77EC /* FLCollectionComponentController.swift */; };
+		EEC1EB8E2147D1B600FB77EC /* FLBaseComponentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB7F2147D1B600FB77EC /* FLBaseComponentProtocol.swift */; };
+		EEC1EB8F2147D1B600FB77EC /* FLCollectionComponentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB802147D1B600FB77EC /* FLCollectionComponentProtocol.swift */; };
+		EEC1EB902147D1B600FB77EC /* FLBaseComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB812147D1B600FB77EC /* FLBaseComponent.swift */; };
+		EEC1EB912147D1B600FB77EC /* FLCollectionBaseComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB822147D1B600FB77EC /* FLCollectionBaseComponent.swift */; };
+		EEC1EB922147D1B600FB77EC /* FLBaseHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB832147D1B600FB77EC /* FLBaseHandlerProtocol.swift */; };
+		EEC1EB932147D1B600FB77EC /* FLTableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB842147D1B600FB77EC /* FLTableViewHandler.swift */; };
+		EEC1EB942147D1B600FB77EC /* FLCollectionHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB852147D1B600FB77EC /* FLCollectionHeaderFooterView.swift */; };
+		EEC1EB952147D1B600FB77EC /* FLCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB862147D1B600FB77EC /* FLCollectionViewFlowLayout.swift */; };
+		EEC1EB962147D1B600FB77EC /* FLTableBaseComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB872147D1B600FB77EC /* FLTableBaseComponent.swift */; };
+		EEC1EB972147D1B600FB77EC /* FLTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1EB882147D1B600FB77EC /* FLTableViewHeaderFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +44,21 @@
 		EEC1EB2F2147CD4700FB77EC /* FLTableComponentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLTableComponentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC1EB342147CD4700FB77EC /* FLTableComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLTableComponentTests.swift; sourceTree = "<group>"; };
 		EEC1EB362147CD4700FB77EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEC1EB7A2147D1B500FB77EC /* FLCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCollectionViewCell.swift; sourceTree = "<group>"; };
+		EEC1EB7B2147D1B500FB77EC /* FLTableComponentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTableComponentController.swift; sourceTree = "<group>"; };
+		EEC1EB7C2147D1B500FB77EC /* FLCollectionViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCollectionViewHandler.swift; sourceTree = "<group>"; };
+		EEC1EB7D2147D1B500FB77EC /* FLTableComponentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTableComponentProtocol.swift; sourceTree = "<group>"; };
+		EEC1EB7E2147D1B600FB77EC /* FLCollectionComponentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCollectionComponentController.swift; sourceTree = "<group>"; };
+		EEC1EB7F2147D1B600FB77EC /* FLBaseComponentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLBaseComponentProtocol.swift; sourceTree = "<group>"; };
+		EEC1EB802147D1B600FB77EC /* FLCollectionComponentProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCollectionComponentProtocol.swift; sourceTree = "<group>"; };
+		EEC1EB812147D1B600FB77EC /* FLBaseComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLBaseComponent.swift; sourceTree = "<group>"; };
+		EEC1EB822147D1B600FB77EC /* FLCollectionBaseComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCollectionBaseComponent.swift; sourceTree = "<group>"; };
+		EEC1EB832147D1B600FB77EC /* FLBaseHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLBaseHandlerProtocol.swift; sourceTree = "<group>"; };
+		EEC1EB842147D1B600FB77EC /* FLTableViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTableViewHandler.swift; sourceTree = "<group>"; };
+		EEC1EB852147D1B600FB77EC /* FLCollectionHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCollectionHeaderFooterView.swift; sourceTree = "<group>"; };
+		EEC1EB862147D1B600FB77EC /* FLCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		EEC1EB872147D1B600FB77EC /* FLTableBaseComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTableBaseComponent.swift; sourceTree = "<group>"; };
+		EEC1EB882147D1B600FB77EC /* FLTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +102,21 @@
 			isa = PBXGroup;
 			children = (
 				EEC1EB292147CD4700FB77EC /* FLTableComponent.h */,
+				EEC1EB812147D1B600FB77EC /* FLBaseComponent.swift */,
+				EEC1EB7F2147D1B600FB77EC /* FLBaseComponentProtocol.swift */,
+				EEC1EB832147D1B600FB77EC /* FLBaseHandlerProtocol.swift */,
+				EEC1EB822147D1B600FB77EC /* FLCollectionBaseComponent.swift */,
+				EEC1EB7E2147D1B600FB77EC /* FLCollectionComponentController.swift */,
+				EEC1EB802147D1B600FB77EC /* FLCollectionComponentProtocol.swift */,
+				EEC1EB852147D1B600FB77EC /* FLCollectionHeaderFooterView.swift */,
+				EEC1EB7A2147D1B500FB77EC /* FLCollectionViewCell.swift */,
+				EEC1EB862147D1B600FB77EC /* FLCollectionViewFlowLayout.swift */,
+				EEC1EB7C2147D1B500FB77EC /* FLCollectionViewHandler.swift */,
+				EEC1EB872147D1B600FB77EC /* FLTableBaseComponent.swift */,
+				EEC1EB7B2147D1B500FB77EC /* FLTableComponentController.swift */,
+				EEC1EB7D2147D1B500FB77EC /* FLTableComponentProtocol.swift */,
+				EEC1EB842147D1B600FB77EC /* FLTableViewHandler.swift */,
+				EEC1EB882147D1B600FB77EC /* FLTableViewHeaderFooterView.swift */,
 				EEC1EB2A2147CD4700FB77EC /* Info.plist */,
 			);
 			path = FLTableComponent;
@@ -148,6 +193,7 @@
 				TargetAttributes = {
 					EEC1EB252147CD4700FB77EC = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					EEC1EB2E2147CD4700FB77EC = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -194,6 +240,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC1EB902147D1B600FB77EC /* FLBaseComponent.swift in Sources */,
+				EEC1EB912147D1B600FB77EC /* FLCollectionBaseComponent.swift in Sources */,
+				EEC1EB972147D1B600FB77EC /* FLTableViewHeaderFooterView.swift in Sources */,
+				EEC1EB8D2147D1B600FB77EC /* FLCollectionComponentController.swift in Sources */,
+				EEC1EB8C2147D1B600FB77EC /* FLTableComponentProtocol.swift in Sources */,
+				EEC1EB8E2147D1B600FB77EC /* FLBaseComponentProtocol.swift in Sources */,
+				EEC1EB962147D1B600FB77EC /* FLTableBaseComponent.swift in Sources */,
+				EEC1EB922147D1B600FB77EC /* FLBaseHandlerProtocol.swift in Sources */,
+				EEC1EB942147D1B600FB77EC /* FLCollectionHeaderFooterView.swift in Sources */,
+				EEC1EB8A2147D1B600FB77EC /* FLTableComponentController.swift in Sources */,
+				EEC1EB8B2147D1B600FB77EC /* FLCollectionViewHandler.swift in Sources */,
+				EEC1EB8F2147D1B600FB77EC /* FLCollectionComponentProtocol.swift in Sources */,
+				EEC1EB952147D1B600FB77EC /* FLCollectionViewFlowLayout.swift in Sources */,
+				EEC1EB892147D1B600FB77EC /* FLCollectionViewCell.swift in Sources */,
+				EEC1EB932147D1B600FB77EC /* FLTableViewHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +400,7 @@
 		EEC1EB3B2147CD4700FB77EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yidahis.low.FLTableComponent;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +427,7 @@
 		EEC1EB3C2147CD4700FB77EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +453,7 @@
 		EEC1EB3E2147CD4700FB77EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR56G5F9RH;
 				INFOPLIST_FILE = FLTableComponentTests/Info.plist;
@@ -407,6 +472,7 @@
 		EEC1EB3F2147CD4700FB77EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR56G5F9RH;
 				INFOPLIST_FILE = FLTableComponentTests/Info.plist;
