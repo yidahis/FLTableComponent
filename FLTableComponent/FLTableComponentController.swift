@@ -8,27 +8,27 @@
 
 import UIKit
 
-class FLTableComponentController: UIViewController {
+open class FLTableComponentController: UIViewController {
     
     private(set) var handler : FLTableViewHandler = FLTableViewHandler()
     
-    lazy var tableView : UITableView = {
+    open lazy var tableView : UITableView = {
         let tableView : UITableView = UITableView.init(frame: self.customRect, style: self.tableViewStyle)
         return tableView
     }()
     
-    var components : Array<FLTableBaseComponent> = [] {
+    open var components : Array<FLTableBaseComponent> = [] {
         didSet {
             handler.components = components
         }
     }
     
-    override func viewDidLayoutSubviews() {
+    override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = self.customRect
     }
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         handler.delegate = self

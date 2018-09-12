@@ -192,11 +192,11 @@ enum FLComponentRemoveType {
     case Last
 }
 
-class FLBaseComponent: NSObject, FLBaseComponentProtocol {
+open class FLBaseComponent: NSObject, FLBaseComponentProtocol {
 
     var section : Int? = 0
     
-    final var cellIdentifier : String {
+    open var cellIdentifier : String {
         return "\(NSStringFromClass(type(of: self))).\(FLIdentifierType.Cell.rawValue)"
     }
     

@@ -10,15 +10,15 @@ import UIKit
 
 let FLTableViewCellDefaultHeight : CGFloat = 44
 
-class FLTableBaseComponent: FLBaseComponent, FLTableComponentConfiguration {
+open class FLTableBaseComponent: FLBaseComponent, FLTableComponentConfiguration {
     
-    private(set) var tableView : UITableView?
+    open private(set) var tableView : UITableView?
     
     private(set) var componentIdentifier : String = ""
     
     private(set) var isCustomIdentifier = false
     
-    init(tableView : UITableView){
+    public init(tableView : UITableView){
         super.init()
         self.tableView = tableView
         self.register()
@@ -50,22 +50,22 @@ class FLTableBaseComponent: FLBaseComponent, FLTableComponentConfiguration {
 
 extension FLTableBaseComponent {
     
-    override func register() {
+    override open func register() {
         tableView?.registerClass(UITableViewCell.self, withReuseIdentifier: cellIdentifier)
         tableView?.registerClass(FLTableViewHeaderFooterView.self, withReuseIdentifier: headerIdentifier)
         tableView?.registerClass(FLTableViewHeaderFooterView.self, withReuseIdentifier: footerIdentifier)
     }
     
     
-    var tableViewCellStyle: UITableViewCellStyle {
+    open var tableViewCellStyle: UITableViewCellStyle {
         return .default
     }
     
-    func numberOfRows() -> NSInteger {
+    open func numberOfRows() -> NSInteger {
         return 0
     }
     
-    func cellForRow(at row: Int) -> UITableViewCell {
+    open func cellForRow(at row: Int) -> UITableViewCell {
         var cell = tableView?.dequeueReusableCell(withIdentifier: cellIdentifier)
         if cell == nil {
             cell = UITableViewCell.init(style: tableViewCellStyle, reuseIdentifier: cellIdentifier)
@@ -75,7 +75,7 @@ extension FLTableBaseComponent {
         return cell!
     }
     
-    func additionalOperationForReuseCell(_ cell : UITableViewCell?) {
+    open func additionalOperationForReuseCell(_ cell : UITableViewCell?) {
         // something to reuse
     }
 }
@@ -166,7 +166,7 @@ extension FLTableBaseComponent {
 
 extension FLTableBaseComponent {
     
-    func heightForRow(at row: Int) -> CGFloat {
+    open func heightForRow(at row: Int) -> CGFloat {
         return FLTableViewCellDefaultHeight
     }
     
