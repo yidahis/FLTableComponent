@@ -38,11 +38,11 @@ open class FLTableComponentController: UIViewController {
         self.tableView.tableFooterView = footerView(of: tableView)
     }
     
-    func headerView(of tableView : UITableView) -> UIView? {
+    open func headerView(of tableView : UITableView) -> UIView? {
         return nil
     }
     
-    func footerView(of tableView : UITableView) -> UIView? {
+    open func footerView(of tableView : UITableView) -> UIView? {
         return nil
     }
 }
@@ -53,26 +53,26 @@ extension FLTableComponentController : FLTableComponentConfiguration {
         return UITableViewStyle.plain
     }
     
-    var customRect: CGRect {
+    open var customRect: CGRect {
         return self.view.bounds
     }
     
-    func reloadComponent() {
+    open func reloadComponent() {
         handler.reloadComponents()
     }
 }
 
 extension FLTableComponentController : FLTableViewHandlerDelegate {
     
-    func tableViewDidClick(_ handler: FLTableViewHandler, cellAt indexPath: IndexPath) {
+    open func tableViewDidClick(_ handler: FLTableViewHandler, cellAt indexPath: IndexPath) {
         // subclass override it
     }
     
-    func tableViewDidClick(_ handler: FLTableViewHandler, headerAt section: NSInteger) {
+    open func tableViewDidClick(_ handler: FLTableViewHandler, headerAt section: NSInteger) {
         // subclass override it
     }
     
-    func tableViewDidClick(_ handler: FLTableViewHandler, footerAt section: NSInteger) {
+    open func tableViewDidClick(_ handler: FLTableViewHandler, footerAt section: NSInteger) {
         // subclass override it
     }
 }

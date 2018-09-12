@@ -25,6 +25,10 @@ class ViewController: FLTableComponentController {
         
         components = tmpComponents
     }
+    
+    override var customRect: CGRect{
+        return self.view.frame
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -16,7 +16,7 @@ import UIKit
     @objc optional func scrollViewDidScroll(_ scrollView: UIScrollView)
 }
 
-class FLTableViewHandler: NSObject {
+open class FLTableViewHandler: NSObject {
     
     private(set) lazy var componentsDict : NSMutableDictionary = {
         return NSMutableDictionary.init()
@@ -162,18 +162,18 @@ extension FLTableViewHandler : FLTableViewHandlerProtocol {
 }
 
 extension FLTableViewHandler :  UITableViewDataSource {
-    final func numberOfSections(in tableView: UITableView) -> Int {
+    final public func numberOfSections(in tableView: UITableView) -> Int {
         return components.count
     }
     
-    final func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    final public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard components.count > 0 else {
             return 0
         }
         return components[section].numberOfRows()
     }
     
-    final func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    final public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard components.count > 0 else {
             return UITableViewCell()
         }
@@ -187,7 +187,7 @@ extension FLTableViewHandler :  UITableViewDataSource {
 
 extension FLTableViewHandler {
     
-    final func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
+    final public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
         guard components.count > 0 else {
             return nil
         }
@@ -197,7 +197,7 @@ extension FLTableViewHandler {
         return headerView
     }
     
-    final func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{
+    final public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView?{
         guard components.count > 0 else {
             return nil
         }
@@ -212,21 +212,21 @@ extension FLTableViewHandler {
 
 extension FLTableViewHandler {
     
-    final func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+    final public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         guard components.count > 0 else {
             return 0
         }
         return components[indexPath.section].heightForRow(at: indexPath.row)
     }
     
-    final func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat{
+    final public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat{
         guard components.count > 0 else {
             return 0
         }
         return components[section].heightForHeader()
     }
     
-    final func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat{
+    final public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat{
         guard components.count > 0 else {
             return 0
         }
@@ -239,7 +239,7 @@ extension FLTableViewHandler {
 
 extension FLTableViewHandler {
     
-    final func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath){
+    final public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath){
         guard components.count > 0, indexPath.section < components.count else {
             return
         }
@@ -286,11 +286,11 @@ extension FLTableViewHandler {
 // MARK : Event
 
 extension FLTableViewHandler : UITableViewDelegate, FLTableComponentEvent {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.tableViewDidClick?(self, cellAt: indexPath)
     }
     
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+    public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         guard components.count > 0, indexPath.section < components.count else {
             return false
         }
@@ -300,7 +300,7 @@ extension FLTableViewHandler : UITableViewDelegate, FLTableComponentEvent {
         return false
     }
     
-    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         guard components.count > 0, indexPath.section < components.count else {
             return
         }
@@ -309,7 +309,7 @@ extension FLTableViewHandler : UITableViewDelegate, FLTableComponentEvent {
         }
     }
     
-    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
         guard components.count > 0, indexPath.section < components.count else {
             return
         }
@@ -325,7 +325,7 @@ extension FLTableViewHandler : UITableViewDelegate, FLTableComponentEvent {
     func tableFooterView(_ footerView: FLTableViewHeaderFooterView, didClickSectionAt section: Int) {
         self.delegate?.tableViewDidClick?(self, footerAt : section)
     }
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.delegate?.scrollViewDidScroll?(scrollView)
     }
 }

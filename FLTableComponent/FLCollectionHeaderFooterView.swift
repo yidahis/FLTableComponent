@@ -12,7 +12,7 @@ import UIKit
     func headerFooterViewDidClick(_ headerFooterView : FLCollectionHeaderFooterView, atSection : NSInteger)
 }
 
-class FLCollectionHeaderFooterView: UICollectionReusableView, FLCollectionComponentConfiguration {
+open class FLCollectionHeaderFooterView: UICollectionReusableView, FLCollectionComponentConfiguration {
     
     /// get component and type for reuse before the method init(frame:) call
     static weak var component : FLCollectionBaseComponent?
@@ -40,11 +40,11 @@ class FLCollectionHeaderFooterView: UICollectionReusableView, FLCollectionCompon
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func prepareForReuse() {
+    override open func prepareForReuse() {
         super.prepareForReuse()
     }
     

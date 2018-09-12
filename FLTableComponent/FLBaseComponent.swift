@@ -132,7 +132,7 @@ extension UICollectionView {
         }
     }
     
-    func registerClass(_ viewClass: Swift.AnyClass, withReuseIdentifier identifier: String) {
+    open func registerClass(_ viewClass: Swift.AnyClass, withReuseIdentifier identifier: String) {
         let identifierType = FLIdentifierType.type(of: identifier)
         if identifierType == .Header {
             self.register(viewClass, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: identifier)
@@ -145,7 +145,7 @@ extension UICollectionView {
         }
     }
     
-    func registerNib(_ nibClass: Swift.AnyClass, withReuseIdentifier identifier: String) {
+    open func registerNib(_ nibClass: Swift.AnyClass, withReuseIdentifier identifier: String) {
         if let name = NSStringFromClass(nibClass).components(separatedBy: ".").last {
             let identifierType = FLIdentifierType.type(of: identifier)
             if identifierType == .Header {
@@ -163,7 +163,7 @@ extension UICollectionView {
         }
     }
     
-    func dequeueCell(withReuseIdentifier identifier: String, forIndxPath: IndexPath) -> UICollectionViewCell? {
+    open func dequeueCell(withReuseIdentifier identifier: String, forIndxPath: IndexPath) -> UICollectionViewCell? {
         let identifierType = FLIdentifierType.type(of: identifier)
         if identifierType == .Cell {
             return self.dequeueReusableCell(withReuseIdentifier: identifier, for: forIndxPath)
@@ -173,7 +173,7 @@ extension UICollectionView {
         }
     }
     
-    func dequeueReusableHeaderFooterView<T : FLCollectionHeaderFooterView>(withReuseIdentifier identifier: String, section: Int) -> T? {
+    open func dequeueReusableHeaderFooterView<T : FLCollectionHeaderFooterView>(withReuseIdentifier identifier: String, section: Int) -> T? {
         let identifierType = FLIdentifierType.type(of: identifier)
         if identifierType == .Header {
             return self.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: identifier, for: IndexPath.init(item: 0, section: section)) as? T
