@@ -32,7 +32,7 @@ open class FLTableBaseComponent: FLBaseComponent, FLTableComponentConfiguration 
         self.componentIdentifier = identifier
     }
     
-    final override var section: Int? {
+    open internal(set) override var section: Int? {
         didSet {
             if !isCustomIdentifier {
                 self.componentIdentifier = "\(NSStringFromClass(type(of: self))).Component.\(section!))"
