@@ -79,12 +79,12 @@ class FLCollectionViewFlowLayout: UICollectionViewFlowLayout {
             var attributeDict : LayoutAttributesDict = [FLIdentifierType.Cell : itemAttributes]
             if let items = self.collectionView?.numberOfItems(inSection: section) {
                 let headerAttributeSize : CGSize = (self.delegate?.collectionView!(self.collectionView!, layout: self, referenceSizeForHeaderInSection: section))!
-                let headerAttribute = UICollectionViewLayoutAttributes.init(forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, with: IndexPath.init(item: 0, section: section))
+                let headerAttribute = UICollectionViewLayoutAttributes.init(forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, with: IndexPath.init(item: 0, section: section))
                 headerAttribute.frame = CGRect.init(origin: CGPoint.init(x: 0, y: verticalTotalItemMaxY), size: headerAttributeSize)
 
                 verticalTotalItemMaxY = 0
                 
-                let footerAttribute = UICollectionViewLayoutAttributes.init(forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, with: IndexPath.init(item: 0, section: section))
+                let footerAttribute = UICollectionViewLayoutAttributes.init(forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, with: IndexPath.init(item: 0, section: section))
                 
                 //print("----- section (\(section))  ------")
                 
@@ -210,7 +210,7 @@ class FLCollectionViewFlowLayout: UICollectionViewFlowLayout {
         guard let attributeDict = sectionAttributes[indexPath.section] else {
             return nil
         }
-        if elementKind == UICollectionElementKindSectionHeader {
+        if elementKind == UICollectionView.elementKindSectionHeader {
             guard let headerAttributes : LayoutAttributesArray = attributeDict[FLIdentifierType.Header] else {
                 return nil
             }

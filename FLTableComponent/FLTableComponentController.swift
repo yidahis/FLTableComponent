@@ -17,9 +17,13 @@ open class FLTableComponentController: UIViewController {
         return tableView
     }()
     
-    open var components : Array<FLTableBaseComponent> = [] {
+    open var components : Array<FLTableBaseComponent?> = [] {
         didSet {
-            handler.components = components
+            let result = components.map { model -> FLTableBaseComponent in
+                model ?? FLTableBaseComponent(tableView: UITableView())
+            }.filter({$0.tableView == self.tableView})
+    
+            handler.components = result
         }
     }
     
@@ -49,8 +53,8 @@ open class FLTableComponentController: UIViewController {
 
 extension FLTableComponentController : FLTableComponentConfiguration {
     
-    var tableViewStyle: UITableViewStyle {
-        return UITableViewStyle.plain
+    var tableViewStyle: UITableView.Style {
+        return UITableView.Style.plain
     }
     
     open var customRect: CGRect {

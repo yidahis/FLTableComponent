@@ -157,7 +157,7 @@ extension FLTableViewHandler : FLTableViewHandlerProtocol {
         guard components.count > 0, index < components.count else {
             return
         }
-        self.tableView?.reloadSections(IndexSet.init(integer: index), with: UITableViewRowAnimation.none)
+        self.tableView?.reloadSections(IndexSet.init(integer: index), with: UITableView.RowAnimation.none)
     }
 }
 

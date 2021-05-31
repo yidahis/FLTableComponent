@@ -41,7 +41,7 @@ open class FLTableBaseComponent: FLBaseComponent, FLTableComponentConfiguration 
     }
     
     final override func reloadSelfComponent() {
-        tableView?.reloadSections(IndexSet.init(integer: section!), with: UITableViewRowAnimation.none)
+        tableView?.reloadSections(IndexSet.init(integer: section!), with: UITableView.RowAnimation.none)
     }
     
 }
@@ -57,7 +57,7 @@ extension FLTableBaseComponent {
     }
     
     
-    open var tableViewCellStyle: UITableViewCellStyle {
+    open var tableViewCellStyle: UITableViewCell.CellStyle {
         return .default
     }
     

@@ -10,7 +10,10 @@ import UIKit
 import FLTableComponent
 
 class ViewController: FLTableComponentController {
-    var headerComponet: MainTableComponent!
+    var headerComponet: TopTableComponent?
+    var middleComponet: MiddleTableComponent?
+    var bottomComponet: MainTableComponent?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,13 +21,16 @@ class ViewController: FLTableComponentController {
     }
     
     func initComponets(){
-        var tmpComponents : Array<FLTableBaseComponent> = []
+
+        components = [
+            TopTableComponent(tableView: tableView),
+            MiddleTableComponent(tableView: tableView),
+            MainTableComponent(tableView: tableView)
+        ]
         
-        headerComponet = MainTableComponent(tableView: tableView)
-        tmpComponents.append(headerComponet)
-        
-        components = tmpComponents
     }
+    
+
     
     override var customRect: CGRect{
         return self.view.frame

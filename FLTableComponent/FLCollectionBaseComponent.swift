@@ -130,10 +130,10 @@ extension FLCollectionBaseComponent {
     
     final func collectionView(viewOfKind kind: String) -> FLCollectionHeaderFooterView {
         
-        if kind == UICollectionElementKindSectionHeader {
+        if kind == UICollectionView.elementKindSectionHeader {
             return self.headerView()
         }
-        else if kind == UICollectionElementKindSectionFooter {
+        else if kind == UICollectionView.elementKindSectionFooter {
             return self.footerView()
         }
         else {
@@ -200,20 +200,20 @@ extension FLCollectionBaseComponent {
     
     final func collectionView(willDisplayView view : FLCollectionHeaderFooterView, viewOfKind kind: String) {
         
-        if kind == UICollectionElementKindSectionHeader {
+        if kind == UICollectionView.elementKindSectionHeader {
             self.collectionView(willDisplayHeaderView: view)
         }
-        else if kind == UICollectionElementKindSectionFooter {
+        else if kind == UICollectionView.elementKindSectionFooter {
             self.collectionView(willDisplayHeaderView: view)
         }
     }
     
     final func collectionView(didEndDisplayView view : FLCollectionHeaderFooterView, viewOfKind kind: String) {
         
-        if kind == UICollectionElementKindSectionHeader {
+        if kind == UICollectionView.elementKindSectionHeader {
             self.collectionView(didEndDisplayHeaderView: view)
         }
-        else if kind == UICollectionElementKindSectionFooter {
+        else if kind == UICollectionView.elementKindSectionFooter {
             self.collectionView(didEndDisplayHeaderView: view)
         }
     }

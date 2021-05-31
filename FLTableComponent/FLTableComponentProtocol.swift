@@ -15,10 +15,10 @@ import UIKit
     // custom UI,default tableView is plain
     
     /// override this property in controller to change current tableView style
-    @objc optional var tableViewStyle : UITableViewStyle { get }
+    @objc optional var tableViewStyle : UITableView.Style { get }
     
     /// override this property in component to change current tableViewCell style, default is .default
-    @objc optional var tableViewCellStyle : UITableViewCellStyle { get }
+    @objc optional var tableViewCellStyle : UITableViewCell.CellStyle { get }
     
     // dataSource configuration
     

@@ -135,10 +135,10 @@ extension UICollectionView {
     open func registerClass(_ viewClass: Swift.AnyClass, withReuseIdentifier identifier: String) {
         let identifierType = FLIdentifierType.type(of: identifier)
         if identifierType == .Header {
-            self.register(viewClass, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: identifier)
+            self.register(viewClass, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: identifier)
         }
         else if identifierType == .Footer {
-            self.register(viewClass, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: identifier)
+            self.register(viewClass, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: identifier)
         }
         else if identifierType == .Cell {
             self.register(viewClass, forCellWithReuseIdentifier: identifier)
@@ -149,10 +149,10 @@ extension UICollectionView {
         if let name = NSStringFromClass(nibClass).components(separatedBy: ".").last {
             let identifierType = FLIdentifierType.type(of: identifier)
             if identifierType == .Header {
-                self.register(UINib.init(nibName: name, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: identifier)
+                self.register(UINib.init(nibName: name, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: identifier)
             }
             else if identifierType == .Footer {
-                self.register(UINib.init(nibName: name, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: identifier)
+                self.register(UINib.init(nibName: name, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: identifier)
             }
             else if identifierType == .Cell {
                 self.register(UINib.init(nibName: name, bundle: nil), forCellWithReuseIdentifier: identifier)
@@ -176,10 +176,10 @@ extension UICollectionView {
     open func dequeueReusableHeaderFooterView<T : FLCollectionHeaderFooterView>(withReuseIdentifier identifier: String, section: Int) -> T? {
         let identifierType = FLIdentifierType.type(of: identifier)
         if identifierType == .Header {
-            return self.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: identifier, for: IndexPath.init(item: 0, section: section)) as? T
+            return self.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: identifier, for: IndexPath.init(item: 0, section: section)) as? T
         }
         else if identifierType == .Footer {
-            return self.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: identifier, for: IndexPath.init(item: 0, section: section)) as? T
+            return self.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: identifier, for: IndexPath.init(item: 0, section: section)) as? T
         }
         else{
             return nil
